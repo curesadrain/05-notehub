@@ -16,8 +16,14 @@ function App() {
   const [modalState, setModalState] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
 
-  const openModal = () => setModalState(true);
-  const closeModal = () => setModalState(false);
+  const openModal = () => {
+    document.body.style.overflow = "hidden";
+    setModalState(true);
+  };
+  const closeModal = () => {
+    document.body.style.overflow = "auto";
+    setModalState(false);
+  };
 
   const handleClose = () => closeModal();
 
